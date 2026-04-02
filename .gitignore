@@ -1,0 +1,35 @@
+# Game data - too large for git
+base/maps.pk3
+base/models.pk3
+base/mp.pk3
+base/musicandsound.pk3
+base/skins.pk3
+base/textures0.pk3
+base/textures1234.pk3
+base/therest.pk3
+base/update101.PK3
+base/update102.pk3
+base/update103.pk3
+base/update104.pk3
+base/update105.pk3
+
+# PerfectFX - redistributed separately, not ours
+base/XTK_PerfectFX2.0.pk3
+base/XTK_PerfectFX2.0_Gore.pk3
+base/XTK_PerfectFX2.0_MF_New.pk3
+base/XTK_PerfectFX2.0_WM.pk3
+base/XTK_PerfectFX2.0*.bak
+
+# WeaponMod original - redistributed separately
+WeaponMod/WeaponMod.pk3
+
+# Key file from WeaponMod (not ours to share)
+base/mp/sof2key
+
+# Misc
+Pb/scrnshot/
+Pb/svlogs/
+Pb/svss/
+*.lnk
+EULA.txt
+unins000.*

@@ -1,0 +1,3769 @@
+version	"SOF2 weapons"
+
+difficultyLevels
+{
+	level
+	{
+		name	"easy"
+	}
+
+	level
+	{
+		name	"medium"
+	}
+
+	level
+	{
+		name	"hard"
+	}
+
+	level
+	{
+		name	"superhard"
+	}
+
+	level
+	{
+		name	"custom"
+	}
+}
+
+wpnEncumbranceLevels
+{
+	level
+	{
+		number	0
+
+		inventoryConstraint
+		{
+			type	"knife"
+			limit	2
+			
+			categories
+			[
+				"knife"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"sidearm"
+			limit	2
+			
+			categories
+			[
+				"pistol"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"main weapon"
+			limit	6
+			
+			categories
+			[
+				"shotgun"
+				"sub-machine gun"
+				"assault rifle"
+				"sniper rifle"
+				"heavy weapon"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"grenade"
+			limit	4
+			
+			categories
+			[
+				"grenade"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"equipment"
+			limit	1
+			
+			categories
+			[
+				"equipment"
+			]
+		}
+	}
+
+	level
+	{
+		number	1
+
+		inventoryConstraint
+		{
+			type	"knife"
+			limit	6
+			
+			categories
+			[
+				"knife"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"sidearm"
+			limit	2
+			
+			categories
+			[
+				"pistol"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"main weapon"
+			limit	4
+			
+			categories
+			[
+				"shotgun"
+				"sub-machine gun"
+				"assault rifle"
+				"sniper rifle"
+				"heavy weapon"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"grenade"
+			limit	4
+			
+			categories
+			[
+				"grenade"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"equipment"
+			limit	1
+			
+			categories
+			[
+				"equipment"
+			]
+		}
+	}
+
+	level
+	{
+		number	2
+
+		inventoryConstraint
+		{
+			type	"knife"
+			limit	6
+			
+			categories
+			[
+				"knife"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"sidearm"
+			limit	2
+			
+			categories
+			[
+				"pistol"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"main weapon"
+			limit	4
+			
+			categories
+			[
+				"shotgun"
+				"sub-machine gun"
+				"assault rifle"
+				"sniper rifle"
+				"heavy weapon"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"grenade"
+			limit	4
+			
+			categories
+			[
+				"grenade"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"equipment"
+			limit	1
+			
+			categories
+			[
+				"equipment"
+			]
+		}
+	}
+
+	level
+	{
+		number	3
+
+		inventoryConstraint
+		{
+			type	"knife"
+			limit	6
+			
+			categories
+			[
+				"knife"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"sidearm"
+			limit	2
+			
+			categories
+			[
+				"pistol"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"main weapon"
+			limit	4
+			
+			categories
+			[
+				"shotgun"
+				"sub-machine gun"
+				"assault rifle"
+				"sniper rifle"
+				"heavy weapon"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"grenade"
+			limit	4
+			
+			categories
+			[
+				"grenade"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"equipment"
+			limit	1
+			
+			categories
+			[
+				"equipment"
+			]
+		}
+	}
+
+	level
+	{
+		number 4
+
+		inventoryConstraint
+		{
+			type	"knife"
+			limit	6
+			
+			categories
+			[
+				"knife"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"sidearm"
+			limit	10
+			
+			categories
+			[
+				"pistol"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"main weapon"
+			limit	30
+			
+			categories
+			[
+				"shotgun"
+				"sub-machine gun"
+				"assault rifle"
+				"sniper rifle"
+				"heavy weapon"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"grenade"
+			limit	10
+			
+			categories
+			[
+				"grenade"
+			]
+		}
+
+		inventoryConstraint
+		{
+			type	"equipment"
+			limit	4
+			
+			categories
+			[
+				"equipment"
+			]
+		}
+	}
+
+}
+
+weapon
+{
+	name		"Knife"
+	displayName	"WEAPONS_NAME_KNIFE"
+	model		"models/weapons/knife/world/knifeworld.glm"
+	safe		true
+	rank		0.05
+	cvar		wp_knife
+	category	1		// knife
+	menuImage	"hud/weapon_icons/knife_icon"
+
+	mp_animRaise	"TORSO_RAISE_KNIFE"
+	mp_animDrop		"TORSO_DROP_KNIFE"
+	mp_animIdle		"TORSO_IDLE_KNIFE"
+
+	attack
+	{
+		ammoType		"Knife"
+		clipSize		"1"
+		damage		"40"
+		melee			knife
+		range			96
+		volume		0.0
+
+		mp_range		96
+		mp_fireAmount	0
+		mp_damage		65
+		mp_gore		no
+		mp_animFire		"TORSO_ATTACK_KNIFE"
+		mp_extraClips	"5"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+	altattack
+	{
+		ammoType		"Knife"
+		clipSize		"1"
+		damage		"100"
+		volume		0.0
+
+		mp_damage		80
+		mp_gore		no
+		mp_animFire		"TORSO_ATTACK_KNIFE_THROW"
+
+		projectile
+		{
+			gravity				1
+			speed				1100
+			detonation			sticky
+			model				"models/weapons/knife/world/knifeworld.glm"
+			objectType			"knife"
+			loopSound			"sound/weapons/knife/throw_loop.wav"
+
+			mp_speed			1100
+		}
+	}
+}
+
+weapon
+{
+	name			"US SOCOM"
+	displayName		"WEAPONS_NAME_USSOCOM"
+	model			"models/weapons/ussocom/world/ussocom_sil_MS.glm"
+	safe			true
+	rank			0.1
+	oneHanded		true
+	cvar			wp_ussocom
+	category		2		// pistol
+	menuImage		"hud/weapon_icons/ussocom_icon"
+	menuImageDual	"hud/weapon_icons/ussocom2_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	// new school
+	attack
+	{
+		ammoType			"0.45 ACP"
+		clipSize			"12"
+		damage			"50"
+		lockFlashToBarrel		true
+    	     	muzzleSmoke			"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/smoke_small"
+		ShellCasingEject		"effects/shell_brass_45acp"
+		EjectBone			"ejection_USSOCOM"
+		inaccuracy			".01"
+		maxInaccuracy		".2"
+		range				4500
+		volume			0.1
+		kickAngles				"0 0 -0 0"
+
+		mp_damage			40
+		mp_inaccuracy		.25
+		mp_maxInaccuracy		2.0
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage			"40"
+		melee			blunt
+		range			96
+		volume		0.0
+
+		mp_fireAmount	0
+		mp_range		96
+		mp_damage		70
+		mp_gore		NO
+		mp_animFire		"TORSO_ATTACK_PISTOLWHIP"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name			"MK23"
+	displayName		"WEAPONS_NAME_MK23"
+	model			"models/weapons/ussocom/world/ussocomworld.glm"
+	safe			true
+	rank			0.1
+	oneHanded		true
+	cvar			wp_mk23
+	category		2		// pistol
+	menuImage		"hud/weapon_icons/ussocom_icon"
+	menuImageDual	"hud/weapon_icons/ussocom2_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	// new school
+	attack
+	{
+		ammoType			"0.45 ACP"
+		clipSize			"12"
+		damage			"55"
+		lockFlashToBarrel		true
+		muzzleFlash			"effects/muzzle_flashes/mflash_m1911a1_final"
+    	     	muzzleSmoke			"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_pistols_inworld"
+		ShellCasingEject		"effects/shell_brass_45acp"
+		EjectBone			"ejection_USSOCOM"
+		inaccuracy			".01"
+		maxInaccuracy		".2"
+		range				5000
+		volume			0.75
+		kickAngles				"0 0 -0 0"
+
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage		"40"
+		melee			blunt
+		range			96
+		volume		0.1
+
+		mp_gore		no
+		mp_animFire		"TORSO_ATTACK_PISTOLWHIP"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"M1911A1"
+	displayName	"WEAPONS_NAME_M1911A1"
+	model		"models/weapons/m1911a1/world/m1911a1world.glm"
+	safe		true
+	rank		0.2
+	oneHanded	true
+	cvar		wp_m1911a1
+	category	2		// pistol
+	menuImage	"hud/weapon_icons/m1911a1_icon"
+	menuImageDual	"hud/weapon_icons/m1911a12_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	attack
+	{
+		ammoType			"0.45 ACP"
+		clipSize			"7"
+		damage			"55"
+		muzzleFlash			"effects/muzzle_flashes/mflash_m1911a1_final"
+		lockFlashToBarrel		true
+        	muzzleSmoke			"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_pistols_inworld"
+		ShellCasingEject		"effects/shell_brass_45acp"
+		EjectBone			"ejection_m1911"
+		inaccuracy			".01"
+		maxInaccuracy		".25"
+		range				5000
+		volume			0.75
+		kickAngles				"0 0 -0 0"
+
+		mp_damage			50
+		mp_inaccuracy		.3
+		mp_maxInaccuracy	2.5
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"4"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage		"40"
+		melee			blunt
+		range			96
+		volume		0.0
+
+		mp_fireAmount	0
+		mp_range		60
+		mp_damage		70
+		mp_gore			NO
+		mp_animFire		"TORSO_ATTACK_PISTOLWHIP"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"M1911A1SD"
+	displayName	"WEAPONS_NAME_M1911A1SD"
+	model		"models/weapons/m1911a1/world/m1911a1sdworld.glm"
+	safe		true
+	rank		0.2
+	oneHanded	true
+	cvar		wp_m1911a1sd
+	category	2		// pistol
+	menuImage	"hud/weapon_icons/m1911a1_icon"
+	menuImageDual	"hud/weapon_icons/m1911a12_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	attack
+	{
+		ammoType			"0.45 ACP"
+		clipSize			"7"
+		damage			"50"
+		lockFlashToBarrel		true
+        	muzzleSmoke			"effects/muzzle_flashes/smoke_sd"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/smoke_small"
+		ShellCasingEject		"effects/shell_brass_45acp"
+		EjectBone			"ejection_m1911"
+		inaccuracy			".01"
+		maxInaccuracy		".25"
+		range				4500
+		volume			0.1
+		kickAngles				"0 0 -0 0"
+
+		mp_damage			50
+		mp_inaccuracy		.3
+		mp_maxInaccuracy	2.5
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"4"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage		"40"
+		melee			blunt
+		range			96
+		volume		0.0
+
+		mp_fireAmount	0
+		mp_range		60
+		mp_damage		70
+		mp_gore			NO
+		mp_animFire		"TORSO_ATTACK_PISTOLWHIP"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"M1991A1"
+	displayName	"WEAPONS_NAME_M1991A1"
+	model		"models/weapons/m1911a1/world/m1911a1world.glm"
+	safe		true
+	rank		0.2
+	oneHanded	true
+	cvar		wp_m1991a1
+	category	2		// pistol
+	menuImage	"hud/weapon_icons/m1911a1_icon"
+	menuImageDual	"hud/weapon_icons/m1911a12_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	attack
+	{
+		ammoType			"9mm"
+		clipSize			"9"
+		damage			"45"
+		muzzleFlash			"effects/muzzle_flashes/mflash_m1911a1_final"
+		lockFlashToBarrel		true
+        	muzzleSmoke			"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_pistols_inworld"
+		ShellCasingEject		"effects/shell_brass_9mm_semi"
+		EjectBone			"ejection_m1911"
+		inaccuracy			".01"
+		maxInaccuracy		".25"
+		range				6000
+		volume			0.6
+		kickAngles				"0 0 -0 0"
+
+		mp_damage			50
+		mp_inaccuracy		.3
+		mp_maxInaccuracy	2.5
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"4"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage		"40"
+		melee			blunt
+		range			96
+		volume		0.0
+
+		mp_fireAmount	0
+		mp_range		60
+		mp_damage		70
+		mp_gore			NO
+		mp_animFire		"TORSO_ATTACK_PISTOLWHIP"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"M1991A1SD"
+	displayName	"WEAPONS_NAME_M1991A1SD"
+	model		"models/weapons/b92fssd/world/b92fssdworld.glm"
+	safe		true
+	rank		0.2
+	oneHanded	true
+	cvar		wp_m1991a1sd
+	category	2		// pistol
+	menuImage	"hud/weapon_icons/m1911a1_icon"
+	menuImageDual	"hud/weapon_icons/m1911a12_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	attack
+	{
+		ammoType			"9mm"
+		clipSize			"9"
+		damage			"40"
+		lockFlashToBarrel		true
+        	muzzleSmoke			"effects/muzzle_flashes/smoke_sd"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_pistols_inworld"
+		ShellCasingEject		"effects/shell_brass_9mm_semi"
+		EjectBone			"ejection_m1911"
+		inaccuracy			".01"
+		maxInaccuracy		".25"
+		range				5000
+		volume			0.1
+		kickAngles				"0 0 -0 0"
+
+		mp_damage			50
+		mp_inaccuracy		.3
+		mp_maxInaccuracy	2.5
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"4"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage		"40"
+		melee			blunt
+		range			96
+		volume		0.0
+
+		mp_fireAmount	0
+		mp_range		60
+		mp_damage		70
+		mp_gore			NO
+		mp_animFire		"TORSO_ATTACK_PISTOLWHIP"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name			"SILVER_TALON"
+	displayName		"WEAPONS_NAME_SILVER_TALON"
+	model			"models/weapons/silver_talon/world/silver_talonworld.glm"
+	safe			true
+	rank			0.2
+	oneHanded		true
+	cvar			wp_silver_talon
+	category		2		// pistol
+	menuImage		"hud/weapon_icons/silver_talon_icon"
+	menuImageDual	"hud/weapon_icons/silver_talon2_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	attack
+	{
+		ammoType			"357mag"
+		clipSize			"9"
+		damage			"55"
+		armorPiercing		"0.2"
+		lockFlashToBarrel		true
+		muzzleFlash			"effects/muzzle_flashes/mflash_talon"
+	     	muzzleSmoke			"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_pistols_inworld"
+		ShellCasingEject		"effects/shell_brass_357"
+		EjectBone			"ejection_m1911"
+		inaccuracy			".02"
+		maxInaccuracy		".25"
+		range				7000
+		volume			0.80
+		kickAngles				"0 0 -0 0"
+
+		mp_kickAngles		"1 1 -1 1"
+		mp_damage			55
+		mp_inaccuracy		.5
+		mp_maxInaccuracy		4.5
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"4"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage			"55"
+		melee			blunt
+		range			96
+		volume			0.0
+
+		mp_fireAmount	0
+		mp_range		60
+		mp_damage		70
+		mp_gore			NO
+		mp_animFire		"TORSO_ATTACK_PISTOLWHIP"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"USAS-12"
+	displayName	"WEAPONS_NAME_USAS12"
+	model		"models/weapons/usas12/world/usas12world.glm"
+	safe		true
+	rank		0.7
+	cvar		wp_usas12
+	category	3		// shotgun
+	menuImage	"hud/weapon_icons/usas12_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_USAS12"
+	mp_animReload	"TORSO_RELOAD_USAS12"
+
+	attack
+	{
+		ammoType			"12 gauge"
+		clipSize			"10"
+		damage			"15"	
+		muzzleFlash			"effects/muzzle_flashes/mflash_m590"
+		muzzleSmoke			"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_usas12_inworld"
+		ShellCasingEject		"effects/shell_shotgun"
+		EjectBone			"ejection_usas12"
+		lockFlashToBarrel		true
+		pellets			9
+		// a spread of 1.0 is a 90-degree cone (45 degrees to either side of wpn)
+		spread					.05		
+		range					3500
+		inaccuracy				"0.0"
+		maxInaccuracy			"0"
+		volume					1.0
+		kickAngles				"0 0 -0 0"
+
+		mp_range				2000
+		mp_damage				10
+		mp_inaccuracy			3.5
+		mp_maxInaccuracy			3.5
+		mp_pellets				27
+		mp_fireDelay			75
+		mp_animFire				"TORSO_ATTACK_USAS12"
+		mp_extraClips			"2"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"M590"
+	displayName	"WEAPONS_NAME_M590"
+	model		"models/weapons/m590/world/m590world.glm"
+	safe		true
+	rank		0.4
+	cvar		wp_m590
+	category	3		// shotgun
+	menuImage	"hud/weapon_icons/m590_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_M590"
+	mp_animReloadStart	"TORSO_RELOAD_M590_START"
+	mp_animReload		"TORSO_RELOAD_M590_SHELL"
+	mp_animReloadEnd	"TORSO_RELOAD_M590_END"
+
+	attack
+	{
+		ammoType			"12 gauge"
+		clipSize			"8"
+		damage			"15"	
+		muzzleFlash			"effects/muzzle_flashes/mflash_m590"
+       	muzzleSmoke			"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_m590_inworld"
+		ShellCasingEject		"effects/shell_m590"
+		EjectBone			"ejection_m590"
+		lockFlashToBarrel		true
+		pellets			9
+		spread			.05	
+		range				3500
+		inaccuracy			"0"
+		maxInaccuracy		"0"
+		volume			1.0
+		kickAngles				"0 0 -0 0"
+
+		mp_range				1100
+		mp_damage				22
+		mp_inaccuracy			3
+		mp_pellets				8
+		mp_animFire				"TORSO_ATTACK_M590"
+		mp_extraClips			"2"
+
+		fireModes
+		{
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType	"none"
+		damage		"70"
+		melee		blunt
+		range		128
+		volume		0.1
+
+		mp_fireAmount	0
+		mp_range		60
+		mp_damage		70
+		mp_gore			no
+		mp_animFire		"TORSO_ATTACK_RIFLEBUTT"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"Micro Uzi"
+	displayName	"WEAPONS_NAME_MICROUZI"
+	model		"models/weapons/microuzi/world/microuziworld.glm"
+	safe		true
+	rank		0.4
+	oneHanded	true
+	cvar		wp_microuzi
+	category	4		// sub-machine gun
+	menuImage	"hud/weapon_icons/microuzi_icon"
+	menuImageDual	"hud/weapon_icons/microuzi2_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	attack
+	{
+		ammoType			"9mm"
+		clipSize			"25"
+		damage			"45"
+		muzzleFlash			"effects/muzzle_flashes/mflash_uzi"
+        	muzzleSmoke			"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_uzi_inworld"
+		ShellCasingEject		"effects/shell_brass_9mm_auto"
+		EjectBone			"ejection_microuzi"
+		inaccuracy			".12"
+		maxInaccuracy		".80"
+		range				6000
+		volume			0.6
+		kickAngles				"0 0 -0 0"
+
+		mp_maxInaccuracy		"2.0"
+		mp_inaccuracy		".50"
+		mp_damage			"40"
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"Micro Uzi SD"
+	displayName	"WEAPONS_NAME_MICROUZI"
+	model		"models/weapons/microuzi/world/microuzisdworld.glm"
+	safe		true
+	rank		0.4
+	oneHanded	true
+	cvar		wp_microuzisd
+	category	4		// sub-machine gun
+	menuImage	"hud/weapon_icons/microuzi_icon"
+	menuImageDual	"hud/weapon_icons/microuzi2_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_PISTOL"
+	mp_animReload	"TORSO_RELOAD_PISTOL"
+
+	attack
+	{
+		ammoType			"9mm"
+		clipSize			"25"
+		damage			"40"
+        	muzzleSmoke			"effects/muzzle_flashes/smoke_sd"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/smoke_small"
+		ShellCasingEject		"effects/shell_brass_9mm_auto"
+		EjectBone			"ejection_microuzi"
+		inaccuracy			".12"
+		maxInaccuracy		".80"
+		range				5500
+		volume			0.1
+		kickAngles				"0 0 -0 0"
+
+		mp_maxInaccuracy		"2.0"
+		mp_inaccuracy		".50"
+		mp_damage			"40"
+		mp_animFire			"TORSO_ATTACK_PISTOL"
+		mp_extraClips		"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"M3A1"
+	displayName	"WEAPONS_NAME_M3A1"
+	model		"models/weapons/m3a1/world/m3a1world.glm"
+	safe		true
+	rank		0.3
+	cvar		wp_m3a1
+	category	4		// sub-machine gun
+	menuImage	"hud/weapon_icons/m3a1_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	attack
+	{
+		ammoType				"0.45 ACP"
+		clipSize				"30"
+		damage				"55"
+		muzzleFlash				"effects/muzzle_flashes/mflash_mp5"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_m3a1_inworld"
+		ShellCasingEject			"effects/shell_brass_45acp_m3a1"
+		TracerEffect			"effects/tracerTest2"
+		EjectBone				"ejection_m3a1"
+		inaccuracy				".1"
+		maxInaccuracy			"1"
+		range					5000
+		volume					0.70
+		kickAngles				"0 0 -0 0"
+
+		mp_damage				"50"
+		mp_inaccuracy			".35"
+		mp_maxinaccuracy		"1.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"MP5"
+	displayName	"WEAPONS_NAME_MP5"
+	model		"models/weapons/mp5/world/mp5sc.glm"
+	safe		true
+	rank		0.4
+	oneHanded	false
+	cvar		wp_mp5
+	category	4		// sub-machine gun
+	menuImage	"hud/weapon_icons/mp5a5_icon"
+	
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_MSG90A1_ZOOMED"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	attack
+	{
+		ammoType			"9mm"
+		clipSize			"30"
+		damage			"45"
+		lockFlashToBarrel		true
+		muzzleFlash			"effects/muzzle_flashes/mflash_mp5"
+	     	muzzleSmoke			"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_mp5_inworld"
+		ShellCasingEject		"effects/shell_brass_9mm_auto"
+		EjectBone			"ejection_mp5"
+		inaccuracy				".05"
+		maxInaccuracy			".8"
+		range					6000
+		volume			0.6
+		kickAngles				"0 0 -0 0"
+
+		mp_maxInaccuracy		"1.7"
+		mp_inaccuracy			".20"
+		mp_damage				"35"
+		mp_animFire				"TORSO_ATTACK_MSG90A1_ZOOMED"
+		mp_extraClips			"3"
+		mp_kickAngles			"1 2.1 -2 1"
+		mp_range				5000
+		mp_ammoType_outfitting	"9mm|mp5"
+
+		fireModes
+		{
+			mode1		single
+			mode2		burst
+			mode3		auto
+		}
+	}
+	altattack
+	{
+		action			toggleZoom
+		hud				"Nightscope"
+		kickAngles			"0 0 -0 0"
+		inaccuracy				".05"
+		maxInaccuracy			".8"
+
+		scopeAbilities
+		{
+			nightVision			"sound/weapons/oicw/hud.wav"
+		}
+
+		zoomFactors
+		{
+			2x		60
+		}
+	}
+}
+
+weapon
+{
+	name		"MP5A3"
+	displayName	"WEAPONS_NAME_MP5A3"
+	model		"models/weapons/mp5/world/mp5world.glm"
+	safe		true
+	rank		0.4
+	oneHanded	false
+	cvar		wp_mp5a3
+	category	4		// sub-machine gun
+	menuImage	"hud/weapon_icons/mp5a5_icon"
+	
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_MSG90A1_ZOOMED"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	attack
+	{
+		ammoType			"9mm"
+		clipSize			"30"
+		damage			"45"
+		lockFlashToBarrel		true
+		muzzleFlash			"effects/muzzle_flashes/mflash_mp5"
+	     	muzzleSmoke			"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_mp5_inworld"
+		ShellCasingEject		"effects/shell_brass_9mm_auto"
+		EjectBone			"ejection_mp5"
+		inaccuracy			".05"
+		maxInaccuracy		".8"
+		range				6000
+		volume			0.6
+		kickAngles				"0 0 -0 0"
+
+		mp_maxInaccuracy		"1.7"
+		mp_inaccuracy			".20"
+		mp_damage				"35"
+		mp_animFire				"TORSO_ATTACK_MSG90A1_ZOOMED"
+		mp_extraClips			"3"
+		mp_kickAngles			"1 2.1 -2 1"
+		mp_range				5000
+		mp_ammoType_outfitting	"9mm|mp5"
+
+		fireModes
+		{
+			mode1		single
+			mode3		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"MP5SD"
+	displayName	"WEAPONS_NAME_MP5SD"
+	model		"models/weapons/mp5/world/mp5scsd.glm"
+	safe		true
+	rank		0.4
+	oneHanded	false
+	cvar		wp_mp5sd
+	category	4		// sub-machine gun
+	menuImage	"hud/weapon_icons/mp5_icon"
+	
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_MSG90A1_ZOOMED"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	attack
+	{
+		ammoType			"9mm"
+		clipSize			"30"
+		damage			"40"
+		lockFlashToBarrel		true
+	     	muzzleSmoke			"effects/muzzle_flashes/smoke_small"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/smoke_small"
+		ShellCasingEject		"effects/shell_brass_9mm_auto"
+		EjectBone			"ejection_mp5"
+		inaccuracy			".05"
+		maxInaccuracy		".8"
+		range				5500
+		volume			0.0
+		kickAngles				"0 0 -0 0"
+
+		mp_maxInaccuracy		"1.7"
+		mp_inaccuracy			".20"
+		mp_damage				"35"
+		mp_animFire				"TORSO_ATTACK_MSG90A1_ZOOMED"
+		mp_extraClips			"3"
+		mp_kickAngles			"1 2.1 -2 1"
+		mp_range				5000
+		mp_ammoType_outfitting	"9mm|mp5"
+
+		fireModes
+		{
+			mode1		single
+			mode2		burst
+			mode3		auto
+		}
+	}
+
+	altattack
+	{
+		action			toggleZoom
+		hud				"Nightscope"
+		kickAngles			"0 0 -0 0"
+		inaccuracy				".05"
+		maxInaccuracy			".8"
+
+		scopeAbilities
+		{
+			nightVision			"sound/weapons/oicw/hud.wav"
+		}
+
+		zoomFactors
+		{
+			2x		60
+		}
+	}
+}
+
+weapon
+{
+	name			"M4"
+	displayName		"WEAPONS_NAME_M4"
+	model			"models/weapons/m4/world/m4world.glm"
+	safe			true
+	rank			0.5
+	cvar			wp_m4
+	category		5		// assault rifle
+	menuImage		"hud/weapon_icons/m4_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_M4"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"5.56mm"
+		clipSize				"30"
+		damage				"50"
+		armorPiercing			"0.5"
+		muzzleFlash				"effects/muzzle_flashes/mflash_m4"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_m4_inworld"
+		ShellCasingEject			"effects/shell_brass_223"
+		EjectBone				"ejection_m4"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+		range					12000
+		volume					0.8
+		kickAngles				"0 0 -0 0"
+		canFireWhileProne			true
+
+		mp_damage				"35"
+		mp_inaccuracy			".12"
+		mp_maxInaccuracy			"2.15"
+		mp_animFire				"TORSO_ATTACK_M4"
+		mp_kickAngles			"1 3 -2 1"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+}
+
+weapon
+{
+	name			"M5"
+	displayName		"WEAPONS_NAME_M5"
+	model			"models/weapons/m4/world/m4scworld.glm"
+	safe			true
+	rank			0.5
+	cvar			wp_m5
+	category		5		// assault rifle
+	menuImage		"hud/weapon_icons/m4_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_M4"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"5.56mm"
+		clipSize				"30"
+		damage				"50"
+		armorPiercing			"0.5"
+		muzzleFlash				"effects/muzzle_flashes/mflash_m4"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_m4_inworld"
+		ShellCasingEject			"effects/shell_brass_223"
+		EjectBone				"ejection_m4"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+		range					12000
+		volume					0.8
+		kickAngles				"0 0 -0 0"
+		canFireWhileProne			true
+
+		mp_damage				"35"
+		mp_inaccuracy			".12"
+		mp_maxInaccuracy			"2.15"
+		mp_animFire				"TORSO_ATTACK_M4"
+		mp_kickAngles			"1 3 -2 1"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+	altattack
+	{
+		action			toggleZoom
+		hud				"Nightscope"
+		kickAngles			"0 0 -0 0"
+		inaccuracy				".05"
+		maxInaccuracy			".8"
+
+		scopeAbilities
+		{
+			nightVision			"sound/weapons/oicw/hud.wav"
+		}
+
+		zoomFactors
+		{
+			2x		60
+		}
+	}
+}
+
+weapon
+{
+	name			"M6"
+	displayName		"WEAPONS_NAME_M6"
+	model			"models/weapons/m4/world/m4sdscworld.glm"
+	safe			true
+	rank			0.5
+	cvar			wp_m6
+	category		5		// assault rifle
+	menuImage		"hud/weapon_icons/m4_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_M4"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"5.56mm"
+		clipSize				"30"
+		damage				"45"
+		armorPiercing			"0.5"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_sd"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_m4_inworld"
+		ShellCasingEject			"effects/shell_brass_223"
+		EjectBone				"ejection_m4"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+		range					11000
+		volume				0.2
+		kickAngles				"0 0 -0 0"
+		canFireWhileProne			true
+
+		mp_damage				"35"
+		mp_inaccuracy			".12"
+		mp_maxInaccuracy			"2.15"
+		mp_animFire				"TORSO_ATTACK_M4"
+		mp_kickAngles			"1 3 -2 1"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		action			toggleZoom
+		hud				"Nightscope"
+		kickAngles			"0 0 -0 0"
+		inaccuracy				".05"
+		maxInaccuracy			".8"
+
+		scopeAbilities
+		{
+			nightVision			"sound/weapons/oicw/hud.wav"
+		}
+
+		zoomFactors
+		{
+			2x		60
+		}
+	}
+}
+
+weapon
+{
+	name			"M4A1"
+	displayName		"WEAPONS_NAME_M4A1"
+	model			"models/weapons/m4/world/m4m203world.glm"
+	safe			true
+	rank			0.5
+	cvar			wp_m4a1
+	category		5		// assault rifle
+	menuImage		"hud/weapon_icons/m4m203_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_M4"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"5.56mm"
+		clipSize				"30"
+		damage				"50"
+		armorPiercing			"0.5"
+		muzzleFlash				"effects/muzzle_flashes/mflash_m4"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_m4_inworld"
+		ShellCasingEject			"effects/shell_brass_223"
+		EjectBone				"ejection_m4"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+		range					12000
+		volume				0.8
+		kickAngles				"0 0 -0 0"
+		canFireWhileProne			true
+
+		mp_animFire				"TORSO_ATTACK_M4"
+		mp_extraClips			"5"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		name					"M406"
+		hudIcon				"hud/40mm"
+		ammoType				"40mm HE grenade"
+		clipSize				"1"
+		damage				"300"
+		radius				"200"
+		muzzleFlash				"effects/muzzle_flashes/mflash_mm1"
+       	muzzleSmoke				"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/smoke_big"
+		ShellCasingEject			"effects/shells/shell_40mm_hires"
+		EjectBone				"ejection_m4"
+		TracerEffect			"effects/tracerTest2"
+		volume				0.8
+		kickAngles				"0 0 -0 0"
+
+
+		mp_ammoType				"40mm HE grenade"
+		mp_clipSize				1
+		mp_fireFromClip				2
+		mp_damage				"101"
+		mp_radius				"200"
+		mp_animFire				"TORSO_ATTACK_M4"
+		mp_extraClips			"1"
+		mp_muzzleFlashBone		"flashm203_m4"
+
+		projectile
+		{
+			effect			"effects/m203_trail"
+			gravity			1
+			speed				1200
+			detonation			impact
+			explosionSound		"sound/weapons/frag_grenade/boom03.wav"
+			explosionEffect		"effects/explosions/m203_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			
+
+			mp_speed		1400
+		}
+	}
+}
+
+weapon
+{
+	name		"AK74"
+	displayName	"WEAPONS_NAME_AK74"
+	model		"models/weapons/ak74/world/ak74world.glm"
+	safe		true
+	rank		0.4
+	cvar		wp_ak74
+	category	5		// assault rifle
+	menuImage	"hud/weapon_icons/ak74_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"5.45mm"
+		clipSize				"30"
+		damage				"50"
+		armorPiercing			"0.5"
+		muzzleFlash				"effects/muzzle_flashes/mflash_74"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_74_inworld"
+		ShellCasingEject			"effects/shell_brass_545"
+		EjectBone				"ejection_ak74"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".05"
+		maxInaccuracy			"0.85"
+		range					12000
+		volume				0.8
+		kickAngles				"0 0 -0 0"
+
+		mp_kickAngles			"1 3 -2 1"
+		mp_damage				"45"
+		mp_inaccuracy			".18"
+		mp_maxInaccuracy			"2.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage			"50"
+		melee			bayonet
+		range			128
+		volume			0.1
+
+		mp_fireAmount	0
+		mp_range		75
+		mp_melee		"knife"
+		mp_damage		"75"
+		mp_gore			no
+		mp_animFire		"TORSO_ATTACK_BAYONET"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"AK47"
+	displayName	"WEAPONS_NAME_AK47"
+	model		"models/weapons/ak74/world/ak74world.glm"
+	safe		true
+	rank		0.4
+	cvar		wp_ak47
+	category	5		// assault rifle
+	menuImage	"hud/weapon_icons/ak47_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"7.62mm"
+		clipSize				"30"
+		damage				"60"
+		armorPiercing			"0.55"
+		muzzleFlash				"effects/muzzle_flashes/mflash_47"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_47_inworld"
+		ShellCasingEject			"effects/shell_brass_762"
+		EjectBone				"ejection_ak74"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".15"
+		maxInaccuracy			"0.9"
+		range					16000
+		volume					0.9
+		kickAngles				"0 0 -0 0"
+
+		mp_kickAngles			"1 3 -2 1"
+		mp_damage				"45"
+		mp_inaccuracy			".18"
+		mp_maxInaccuracy			"2.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage			"50"
+		melee			bayonet
+		range			128
+		volume			0.1
+
+		mp_fireAmount	0
+		mp_range		75
+		mp_melee		"knife"
+		mp_damage		"75"
+		mp_gore			no
+		mp_animFire		"TORSO_ATTACK_BAYONET"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+
+weapon
+{
+	name		"AKM"
+	displayName	"WEAPONS_NAME_AKM"
+	model		"models/weapons/ak74/world/ak74world.glm"
+	safe		true
+	rank		0.4
+	cvar		wp_akm
+	category	5		// assault rifle
+	menuImage	"hud/weapon_icons/ak47_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"7.62mm"
+		clipSize				"30"
+		damage				"60"
+		armorPiercing			"0.55"
+		muzzleFlash				"effects/muzzle_flashes/mflash_47"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_47_inworld"
+		ShellCasingEject			"effects/shell_brass_762"
+		EjectBone				"ejection_ak74"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".09"
+		maxInaccuracy			"0.85"
+		range					16000
+		volume					0.9
+		kickAngles				"0 0 -0 0"
+
+		mp_kickAngles			"1 3 -2 1"
+		mp_damage				"45"
+		mp_inaccuracy			".18"
+		mp_maxInaccuracy			"2.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		action			toggleZoom
+		hud				"Sniper3"
+		kickAngles			"0 0 -0 0"
+		inaccuracy				".05"
+		maxInaccuracy			".8"
+
+		zoomFactors
+		{
+			4x		40
+		}
+	}
+}
+
+
+weapon
+{
+	name		"AKMSD"
+	displayName	"WEAPONS_NAME_AKMSD"
+	model		"models/weapons/ak74/world/ak74world.glm"
+	safe		true
+	rank		0.4
+	cvar		wp_akmsd
+	category	5		// assault rifle
+	menuImage	"hud/weapon_icons/ak47_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"7.62mm"
+		clipSize				"30"
+		damage				"60"
+		armorPiercing			"0.55"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_sd"
+		ShellCasingEject			"effects/shell_brass_762"
+		EjectBone				"ejection_ak74"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".09"
+		maxInaccuracy			"0.85"
+		range					16000
+		volume				0.25
+		kickAngles				"0 0 -0 0"
+
+		mp_kickAngles			"1 3 -2 1"
+		mp_damage				"45"
+		mp_inaccuracy			".18"
+		mp_maxInaccuracy			"2.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		action			toggleZoom
+		hud				"Sniper3"
+		kickAngles			"0 0 -0 0"
+		inaccuracy				".05"
+		maxInaccuracy			".8"
+
+		zoomFactors
+		{
+			4x		40
+		}
+	}
+}
+
+weapon
+{
+	name		"TYPE56"
+	displayName	"WEAPONS_NAME_TYPE56"
+	model		"models/weapons/ak74/world/ak74world.glm"
+	safe		true
+	rank		0.4
+	cvar		wp_type56
+	category	5		// assault rifle
+	menuImage	"hud/weapon_icons/type56_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"7.62mm"
+		clipSize				"30"
+		damage				"60"
+		armorPiercing			"0.5"
+		muzzleFlash				"effects/muzzle_flashes/mflash_47"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_47_inworld"
+		ShellCasingEject			"effects/shell_brass_762"
+		EjectBone				"ejection_ak74"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".15"
+		maxInaccuracy			"1.0"
+		range					16000
+		volume					0.9
+		kickAngles				"0 0 -0 0"
+
+		mp_kickAngles			"1 3 -2 1"
+		mp_damage				"45"
+		mp_inaccuracy			".18"
+		mp_maxInaccuracy			"2.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"none"
+		damage		"50"
+		melee			knife
+		range			128
+		volume		0.1
+
+		mp_fireAmount	0
+		mp_range		75
+		mp_melee		"knife"
+		mp_damage		"75"
+		mp_gore		no
+		mp_animFire		"TORSO_ATTACK_BAYONET"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"OICW"
+	displayName	"WEAPONS_NAME_OICW"
+	model		"models/weapons/oicw/world/oicwworld.glm"
+	safe		true
+	rank		0.75
+	cvar		wp_oicw
+	category	5		// assault rifle
+	menuImage	"hud/weapon_icons/oicw_icon"
+
+	attack
+	{
+		ammoType			"5.56mm"
+		clipSize			"20"
+		damage			"50"
+		armorPiercing		"0.5"
+		muzzleFlash			"effects/muzzle_flashes/mflash_oicw"
+	     	muzzleSmoke			"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_oicw_inworld"
+		ShellCasingEject		"effects/shell_brass_223_m29"
+		EjectBone			"ejection_oicw"
+		TracerEffect		"effects/tracerTest2"
+		inaccuracy			".05"
+		maxInaccuracy		"0.7"
+		range				12000
+		volume			0.75
+		kickAngles				"0 0 -0 0"
+
+		mp_damage		70
+
+		fireModes
+		{
+			mode1		single
+			mode2		burst
+		}
+	}
+
+	altattack
+	{
+		name				"20mm"
+		ammoType			"20mm grenade"
+		clipSize			"6"
+		damage			"200"
+		radius			"400"
+		muzzleFlash			"effects/muzzle_flashes/mflash_mm1"
+      	muzzleSmoke			"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/smoke_big"
+		action			togglezoom
+		hudIcon			"hud/40mm"
+		hud				"OICWscope"
+		volume			0.9
+		kickAngles				"0 0 -0 0"
+		inaccuracy			".05"
+		maxInaccuracy		"0.7"
+
+		mp_damage			100
+
+		zoomFactors
+		{
+			1x		80
+			2x		60
+			4x		40
+			6x		20
+		}
+		scopeAbilities
+		{
+			threatBracket		"sound/misc/nullsound.wav"
+			rangeFinder			"sound/weapons/oicw/laser.wav"
+			incFuseRange		"sound/weapons/oicw/range01.wav"
+			decFuseRange		"sound/weapons/oicw/range01.wav"
+			toggleAltFire		"sound/weapons/oicw/range01.wav"
+			windSensor			"sound/misc/nullsound.wav" 
+			reticleCorrect		"sound/misc/nullsound.wav" 
+			nightVision			"sound/weapons/oicw/hud.wav"
+		}
+		projectile
+		{
+			effect			"effects/m203_trail"
+			gravity			1
+			speed				2000
+			detonation			impact
+			explosionEffect 		"effects/explosions/fragment2_explosion"
+			explosionSound		"sound/weapons/frag_grenade/boom04.wav"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+		}
+	}
+
+	altattack
+	{
+		name				"20mm"
+		ammoType			"40mm grenade"
+		clipSize			"6"
+		damage			"300"
+		radius			"200"
+		muzzleFlash			"effects/muzzle_flashes/mflash_mm1"
+      	muzzleSmoke			"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/smoke_big"
+		action			togglezoom
+		hudIcon			"hud/40mm"
+		hud				"OICWscope"
+		volume			0.9
+		kickAngles				"0 0 -0 0"
+		inaccuracy			".05"
+		maxInaccuracy		"0.7"
+
+		mp_damage			100
+
+		zoomFactors
+		{
+			1x		80
+			2x		60
+			4x		40
+			6x		20
+		}
+		scopeAbilities
+		{
+			threatBracket		"sound/misc/nullsound.wav"
+			rangeFinder			"sound/weapons/oicw/laser.wav"
+			incFuseRange		"sound/weapons/oicw/range01.wav"
+			decFuseRange		"sound/weapons/oicw/range01.wav"
+			toggleAltFire		"sound/weapons/oicw/range01.wav"
+			windSensor			"sound/misc/nullsound.wav" 
+			reticleCorrect		"sound/misc/nullsound.wav" 
+			nightVision			"sound/weapons/oicw/hud.wav"
+		}
+		projectile
+		{
+			effect			"effects/m203_trail"
+			gravity			1
+			speed				2000
+			detonation			impact
+			explosionEffect 		"effects/explosions/fragment2_explosion"
+			explosionSound		"sound/weapons/frag_grenade/boom04.wav"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+		}
+	}
+}
+
+weapon
+{
+	name			"SIG552"
+	displayName		"WEAPONS_NAME_SIG552"
+	model			"models/weapons/sig551/world/sig551world.glm"
+	safe			true
+	rank			0.5
+	cvar			wp_sig552
+	category		5		// sniper rifle
+	menuImage		"hud/weapon_icons/sig551_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animIdleZoomed	"TORSO_IDLE_MSG90A1_ZOOMED"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"5.56mm"
+		clipSize				"20"
+		damage				"50"
+		armorPiercing			"0.5"
+		muzzleFlash				"effects/muzzle_flashes/mflash_sig"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_sig_inworld"
+		ShellCasingEject			"effects/shell_brass_223_sig"
+		EjectBone				"ejection_sig551"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+		range					12000
+		volume				0.75
+		kickAngles				"0 0 -0 0"
+		canFireWhileProne			true
+
+		mp_damage				"35"
+		mp_inaccuracy			".18"
+		mp_zoominaccuracy			".1"
+		mp_maxInaccuracy			"2.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_animFireZoomed			"TORSO_ATTACK_MSG90A1_ZOOMED"
+		mp_kickAngles			"1 3.75 -2 1"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		burst
+			mode3		auto
+		}
+	}
+	altattack
+	{
+		action			toggleZoom
+		hud				"Nightscope2"
+		kickAngles			"0 0 -0 0"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+
+		scopeAbilities
+		{
+			nightVision			"sound/weapons/oicw/hud.wav"
+		}
+
+		zoomFactors
+		{
+			2x		60
+		}
+	}
+}
+
+weapon
+{
+	name			"SIG553"
+	displayName		"WEAPONS_NAME_SIG553"
+	model			"models/weapons/sig551/world/sig551world.glm"
+	safe			true
+	rank			0.5
+	cvar			wp_sig553
+	category		5		// sniper rifle
+	menuImage		"hud/weapon_icons/sig551_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animIdleZoomed	"TORSO_IDLE_MSG90A1_ZOOMED"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"5.56mm"
+		clipSize				"20"
+		damage				"50"
+		armorPiercing			"0.5"
+		muzzleFlash				"effects/muzzle_flashes/mflash_sig"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_sig_inworld"
+		ShellCasingEject			"effects/shell_brass_223_sig"
+		EjectBone				"ejection_sig551"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+		range					12000
+		volume				0.75
+		kickAngles				"0 0 -0 0"
+
+		canFireWhileProne			true
+
+		mp_damage				"35"
+		mp_inaccuracy			".18"
+		mp_zoominaccuracy			".1"
+		mp_maxInaccuracy			"2.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_animFireZoomed			"TORSO_ATTACK_MSG90A1_ZOOMED"
+		mp_kickAngles			"1 3.75 -2 1"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		burst
+			mode3		auto
+		}
+	}
+}
+
+weapon
+{
+	name			"SIG551"
+	displayName		"WEAPONS_NAME_SIG551"
+	model			"models/weapons/sig551/world/sig551world.glm"
+	safe			true
+	rank			0.5
+	cvar			wp_sig551
+	category		5		// sniper rifle
+	menuImage		"hud/weapon_icons/sig551_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RIFLE"
+	mp_animIdleZoomed	"TORSO_IDLE_MSG90A1_ZOOMED"
+	mp_animReload	"TORSO_RELOAD_RIFLE"
+
+	// new school
+	attack
+	{
+		ammoType				"5.56mm"
+		clipSize				"20"
+		damage				"50"
+		armorPiercing			"0.5"
+		muzzleFlash				"effects/muzzle_flashes/mflash_sig"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_sig_inworld"
+		ShellCasingEject			"effects/shell_brass_223_sig"
+		EjectBone				"ejection_sig551"
+		TracerEffect			"effects/tracerTest2"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+		range					12000
+		volume				0.75
+		kickAngles				"0 0 -0 0"
+
+		canFireWhileProne			true
+
+		mp_damage				"35"
+		mp_inaccuracy			".18"
+		mp_zoominaccuracy			".1"
+		mp_maxInaccuracy			"2.5"
+		mp_animFire				"TORSO_ATTACK_RIFLE"
+		mp_animFireZoomed			"TORSO_ATTACK_MSG90A1_ZOOMED"
+		mp_kickAngles			"1 3.75 -2 1"
+		mp_extraClips			"3"
+
+		fireModes
+		{
+			mode1		single
+			mode2		burst
+			mode3		auto
+		}
+	}
+	altattack
+	{
+		action			toggleZoom
+		hud				"Sniper2"
+		kickAngles			"0 0 -0 0"
+		inaccuracy				".05"
+		maxInaccuracy			"0.8"
+
+		zoomFactors
+		{
+			4x		40
+		}
+	}
+}
+
+weapon
+{
+	name			"MSG90A1"
+	displayName		"WEAPONS_NAME_MSG90A1"
+	model			"models/weapons/msg90a1/world/msg90a1world.glm"
+	safe			true
+	rank			0.35
+	cvar			wp_msg90a1
+	category		5		// sniper rifle
+	menuImage		"hud/weapon_icons/msg90a1_icon"
+
+	mp_animRaise		"TORSO_RAISE"
+	mp_animDrop			"TORSO_DROP"
+	mp_animIdle			"TORSO_IDLE_USAS12"
+	mp_animIdleZoomed		"TORSO_IDLE_MSG90A1_ZOOMED"
+	mp_animReload		"TORSO_RELOAD_MSG90A1"
+
+	attack
+	{
+		ammoType			"7.62mm belt"
+		clipSize			"20"
+		damage			"65"
+		armorPiercing		"0.7"
+		muzzleFlash			"effects/muzzle_flashes/mflash_msg90"
+       	muzzleSmoke			"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_msg90_inworld"
+		ShellCasingEject		"effects/shell_brass_308"
+		EjectBone			"ejection_msg90a1"
+		range				20000
+		inaccuracy			".10"
+		maxInaccuracy		".50"
+		volume			0.95
+		kickAngles			"0 0 -0 0"
+
+		mp_kickAngles			"1 15 -2 1"
+		mp_damage				120
+		mp_inaccuracy			"1.0"
+		mp_zoomInaccuracy		"0"
+		mp_maxInaccuracy		"2.0"
+		mp_animFire				"TORSO_ATTACK_USAS12"
+		mp_animFireZoomed		"TORSO_ATTACK_MSG90A1_ZOOMED"
+		mp_extraClips			"3"
+		mp_fireDelay			100
+
+		fireModes
+		{
+			mode1		single
+		}
+	}
+
+	altattack
+	{
+		action		toggleZoom
+		hud			"Sniper"
+		kickAngles			"0 0 -0 0"
+
+		zoomFactors
+		{
+			6x		20
+		}
+	}
+}
+
+weapon
+{
+	name		"OSPREYM60"
+	displayName	"WEAPONS_NAME_M60"
+	model		"models/weapons/m60/world/m60world.glm"
+	safe		true
+	rank		0.8
+	cvar		wp_ospreym60
+	category	12		// non-player
+	menuImage	"hud/weapon_icons/m60_icon"
+
+	attack
+	{
+		ammoType				"7.62mm belt"
+		clipSize				"99"
+		damage				"30"
+		pellets				"3"
+		spread				.01
+		
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_osprey_inworld"
+		TracerEffect			"effects/tracerTest2"
+		EjectBone				"ejection_m60"
+		ShellCasingEject			"effects/shell_brass_308_Minigun"
+		range					10000
+		volume				0.9
+		kickAngles				"0 0 -0 0"
+
+		inaccuracy				".25"
+		maxInaccuracy			"2.00"
+
+		mp_kickAngles			"1 2.5 -2 1"
+		mp_damage				60
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"MM1"
+	displayName	"WEAPONS_NAME_MM1"
+	model		"models/weapons/mm1/world/mm1world.glm"
+	safe		false
+	rank		0.8
+	cvar		wp_mm1
+	category	6		// heavy weapon
+	menuImage	"hud/weapon_icons/mm1_icon"
+
+	mp_animRaise		"TORSO_RAISE"
+	mp_animDrop			"TORSO_DROP"
+	mp_animIdle			"TORSO_IDLE_MM1"
+	mp_animReloadStart	"TORSO_RELOAD_MM1_START"
+	mp_animReload		"TORSO_RELOAD_MM1_SHELL"
+	mp_animReloadEnd		"TORSO_RELOAD_MM1_END"
+
+	attack
+	{
+		ammoType				"40mm HE grenade"
+		clipSize				"6"
+		damage				"300"
+		radius				"200"
+		muzzleFlash				"effects/muzzle_flashes/mflash_mm1"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_mm1_inworld"
+		ShellCasingEject			"effects/shells/shell_38mm_hires"
+		TracerEffect			"effects/tracerTest2"
+		volume				0.9
+		kickAngles				"0 0 -0 0"
+
+
+		mp_damage				"200"
+		mp_radius				"150"
+		mp_fireDelay			"350"
+		mp_animFire				"TORSO_ATTACK_MM1"
+		mp_extraClips			"1"
+
+		projectile
+		{
+			effect			"effects/m203_trail"
+			gravity			1
+			speed				1200
+			detonation			impact
+			explosionSound		"sound/weapons/frag_grenade/boom03.wav"
+			explosionEffect		"effects/explosions/m203_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+
+			mp_speed				1400
+		}
+	}
+
+	altattack
+	{
+		name					"M433"
+		hudIcon				"hud/40mm"
+		ammoType				"40mm grenade"
+		clipSize				"6"
+		damage				"250"
+		radius				"300"
+		muzzleFlash				"effects/muzzle_flashes/mflash_mm1"
+       	muzzleSmoke				"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/smoke_big"
+		ShellCasingEject			"effects/shells/shell_40mm_hires"
+		EjectBone				"ejection_m4"
+		TracerEffect			"effects/tracerTest2"
+		volume				0.9
+		kickAngles				"0 0 -0 0"
+
+
+		projectile
+		{
+			effect			"effects/m203_trail"
+			gravity			1
+			speed				1200
+			detonation			impact
+			explosionSound		"sound/weapons/frag_grenade/boom01.wav"
+			explosionEffect 		"effects/explosions/fragment_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			
+
+			mp_speed		1400
+		}
+	}
+}
+
+weapon
+{
+	name		"RPG7"
+	displayName	"WEAPONS_NAME_RPG7"
+	model		"models/weapons/rpg7/world/rpg7world.glm"
+	safe		false
+	rank		0.95
+	cvar		wp_rpg7
+	category	6		// heavy weapon
+	menuImage	"hud/weapon_icons/rpg7_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RPG"
+	mp_animReload	"TORSO_RELOAD_RPG"
+
+	attack
+	{
+		ammoType				"RPG-7V HEAT"
+		clipSize				"1"
+		damage				"450"
+		radius				"300"
+		muzzleFlash				"effects/muzzle_flashes/mflash_mm1"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_mm1_inworld"
+		volume					1.0
+		kickAngles				"0 0 -0 0"
+
+								
+		mp_damage				200
+		mp_animFire				"TORSO_ATTACK_RPG"
+		mp_extraClips			"2"
+
+		projectile
+		{
+			gravity			1
+			speed				3500
+			detonation			impact
+			explosionEffect 		"effects/explosions/rpg7_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			explosionSound		"sound/weapons/frag_grenade/boom02.wav"
+			loopSound			"sound/weapons/rpg7/flyby.wav"
+			effect			"effects/rpg7_trail"
+		}
+	}
+}
+
+weapon
+{
+	name		"M60"
+	displayName	"WEAPONS_NAME_M60"
+	model		"models/weapons/m60/world/m60world.glm"
+	safe		true
+	rank		0.8
+	cvar		wp_m60
+	category	7		// heavy weapon
+	menuImage	"hud/weapon_icons/m60_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_M60"
+	mp_animReload	"TORSO_RELOAD_M60"
+
+	attack
+	{
+		ammoType				"7.62mm belt"
+		clipSize				"99"
+		damage				"65"
+		armorPiercing			"0.7"
+		muzzleFlash				"effects/m60_mflash"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_m60_inworld"
+		TracerEffect			"effects/tracerTest2"
+		ShellCasingEject			"effects/shell_brass_308_MG"
+		EjectBone				"ejection_m60"
+		range					20000
+		volume				0.95
+		kickAngles				"0 0 -0 0"
+
+		inaccuracy				".05"
+		maxInaccuracy			"1.50"
+
+		mp_ammoType				"7.62mm"
+		mp_kickAngles				"1 3.0 -2 1"
+		mp_inaccuracy				".475"
+		mp_maxInaccuracy			"3.00"
+		mp_damage				"55"
+		mp_animFire				"TORSO_ATTACK_M60"
+		mp_extraClips				"1"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"RPG7-2"
+	displayName	"WEAPONS_NAME_RPG72"
+	model		"models/weapons/rpg7/world/rpg7world.glm"
+	safe		false
+	rank		0.95
+	cvar		wp_rpg72
+	category	12
+	menuImage	"hud/weapon_icons/rpg7_icon"
+
+	mp_animRaise	"TORSO_RAISE"
+	mp_animDrop		"TORSO_DROP"
+	mp_animIdle		"TORSO_IDLE_RPG"
+	mp_animReload	"TORSO_RELOAD_RPG"
+
+	attack
+	{
+		ammoType				"RPG-7V HEAT"
+		clipSize				"1"
+		damage				"300"
+		radius				"300"
+		muzzleFlash				"effects/muzzle_flashes/mflash_mm1"
+	     	muzzleSmoke				"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash		"effects/muzzle_flashes/mflash_mm1_inworld"
+		volume					1.0
+		kickAngles				"0 0 -0 0"
+
+								
+		mp_damage				200
+		mp_animFire				"TORSO_ATTACK_RPG"
+		mp_extraClips			"2"
+
+		projectile
+		{
+			gravity			0
+			speed				3000
+			detonation			impact
+//			detonation			timer
+			timer				0.5
+			explosionEffect 		"effects/explosions/rpg7_explosion2"
+//			explosionEffect 		"effects/levels/osprey_death_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			explosionSound		""
+			loopSound			"sound/weapons/rpg7/flyby.wav"
+			effect			"effects/rpg7_trail"
+		}
+	}
+}
+
+weapon
+{
+	name		"OSPREYRPG7"
+	displayName	"WEAPONS_NAME_RPG7"
+	model		"models/weapons/rpg7/world/rpg7world.glm"
+	safe		false
+	rank		0.95
+	cvar		wp_ospreyrpg7
+	category	12		// non-player
+	menuImage	"hud/weapon_icons/rpg7_icon"
+
+	attack
+	{
+		ammoType			"RPG7"
+		clipSize			"1"
+		damage			"200"
+		radius			"300"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_osprey_rocket"
+		volume			1.0
+		kickAngles			"1 5 -2 1"
+	
+		mp_damage		200
+
+		projectile
+		{
+			effect			"effects/osprey_trail"
+			gravity			0
+			speed				3000
+			detonation			impact
+			explosionEffect 		"effects/explosions/rpg7_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			explosionSound		"sound/weapons/frag_grenade/boom02.wav"
+			loopSound			"sound/weapons/rpg7/flyby.wav"
+		}
+	}
+}
+
+
+weapon
+{
+	name			"M67"
+	displayName		"WEAPONS_NAME_M67"
+	model			"models/weapons/m67/world/m67world.glm"
+	safe			false
+	rank			0.3
+	cvar			wp_m67
+	category		8		// grenade
+	menuImage		"hud/weapon_icons/m67_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_GRENADE"
+
+	attack
+	{
+		ammoType		"M67"
+		clipSize		"1"
+		damage		"200"
+		radius		"300"
+		volume		1.0
+
+		mp_damage		200
+		mp_extraClips	"1"
+
+		projectile
+		{
+			model					"models/weapons/m67/world/m67world.glm"
+			effect				"effects/grenade_trail"
+			speed					1000
+			detonation				timer
+			timer					4.0
+			gravity				1
+			bounce				0.0
+			explosionSound			"sound/weapons/frag_grenade/boom04.wav"
+			explosionEffect 			"effects/explosions/fragment2_explosion"
+			underwaterEffect			"effects/explosions/water_explosion_under"
+			waterExplosionEffect		"effects/explosions/water_explosion"
+			objectType				"tinymetalobject"
+			loopsound				"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.45
+			mp_speed		1000
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"M67"
+		clipSize		"1"
+		damage			"200"
+		radius			"300"
+		volume			1.0
+
+		mp_damage		200
+
+		projectile
+		{
+			model				"models/weapons/m67/world/m67world.glm"
+			speed				300
+			detonation			timer
+			timer				4.0
+			gravity			0.1
+			explosionSound		"sound/weapons/frag_grenade/boom04.wav"
+			explosionEffect 		"effects/explosions/fragment2_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.25
+			mp_speed			700
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"M84"
+	displayName	"WEAPONS_NAME_M84"
+	model		"models/weapons/m84/world/m84world.glm"
+	safe		false
+	rank		0.3
+	cvar		wp_m84
+	category	8		// grenade
+	menuImage	"hud/weapon_icons/m84_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_GRENADE"
+
+	attack
+	{
+		ammoType		"M84"
+		clipSize		"1"
+		damage		"10"
+		damageType		flash
+		radius		"600"
+		volume		1.0
+
+		mp_damage		5
+		mp_extraClips	"1"
+
+		projectile
+		{
+			model				"models/weapons/m84/world/m84world.glm"
+			speed				1100
+			detonation			timer
+			timer				2.0
+			gravity			1
+			effect			"effects/grenade_trail"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			explosionEffect 		"effects/explosions/stun_flash2"
+			explosionSound		"sound/weapons/stun_grenade/sonic01.wav"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce			0.45
+			mp_speed			1000
+			mp_timer			3.0
+			mp_effect			""
+			mp_explosionEffect	"effects/explosions/stun_flash_mp"
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"M84"
+		clipSize		"1"
+		damage		"0"
+		damageType		flash
+		radius		"600"
+		volume		1.0
+
+		mp_damage		5
+
+		projectile
+		{
+			model			"models/weapons/m84/world/m84world.glm"
+			speed			300
+			detonation		timer
+			timer			2.0
+			gravity		0.2
+			effect		"effects/grenade_trail"
+			explosionEffect	"effects/explosions/stun_flash2"
+			explosionSound	"sound/weapons/stun_grenade/sonic01.wav"
+			objectType		"tinymetalobject"
+			loopsound		"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.25
+			mp_speed		700
+			mp_timer			3.0
+			mp_effect			""
+			mp_explosionEffect	"effects/explosions/stun_flash_mp"
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"ANM14"
+	displayName	"WEAPONS_NAME_ANM14"
+	model		"models/weapons/anm14/world/anm14world.glm"
+	safe		false
+	rank		0.35
+	cvar		wp_anm14
+	category	8		// grenade
+	menuImage	"hud/weapon_icons/anm14_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_GRENADE"
+
+	attack
+	{
+		ammoType			"ANM14"
+		clipSize			"1"
+		damage			"250"
+		damageType			incendiary
+		radius			"300"
+		volume			1.0
+
+		mp_damage		150
+		mp_extraClips	"1"
+
+		projectile
+		{
+			model			"models/weapons/anm14/world/anm14world.glm"
+			speed			900
+			detonation		timer
+			timer			5.0
+			gravity					1
+			effect			"effects/grenade_trail"
+			explosionEffect 		"effects/explosions/incendiary_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			explosionSound		"sound/weapons/incendiary_grenade/incent01.wav"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce			0.45
+			mp_speed			1000
+			mp_timer			3.0
+			mp_effect			""
+			mp_explosionEffect 	"effects/explosions/incendiary_explosion_mp"
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"ANM14"
+		clipSize		"1"
+		damage			"250"
+		radius			"300"
+		volume			1.0
+
+		mp_damage		200
+
+		projectile
+		{
+			model			"models/weapons/anm14/world/anm14world.glm"
+			speed			300
+			detonation		timer
+			timer			5.0
+			gravity			0.3
+			effect			"effects/grenade_trail"
+			explosionSound		"sound/weapons/incendiary_grenade/incen01.wav"
+			explosionEffect 		"effects/explosions/incendiary_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.25
+			mp_speed		700
+			mp_timer		3.0
+			mp_effect		""
+			mp_explosionEffect 	"effects/explosions/incendiary_explosion_mp"
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"M15"
+	displayName	"WEAPONS_NAME_M15"
+	model		"models/weapons/m15/world/m15world.glm"
+	safe		false
+	rank		0.35
+	cvar		wp_m15
+	category	8		// grenade
+	menuImage	"hud/weapon_icons/m15_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_GRENADE"
+
+	attack
+	{
+		ammoType		"M15"
+		clipSize		"1"
+		damage			"150"
+		damageType		phosphorous
+		radius			"300"
+		volume			8.0
+
+		mp_damage		1
+		mp_extraClips	"1"
+	
+		projectile
+		{
+			model			"models/weapons/m15/world/m15world.glm"
+			speed			900
+			detonation		timer
+			timer			5.0
+			gravity			1
+			effect			"effects/grenade_trail"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			explosionEffect 		"effects/explosions/phosphorus_explosion"
+			explosionSound		"sound/weapons/phos_grenade/phos01.wav"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_explosionEffect	"effects/explosions/phosphorus_explosion_mp"
+
+			mp_bounce		0.45
+			mp_speed		1000
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"M15"
+		clipSize		"1"
+		damage			"150"
+		damageType		phosphorous
+		radius			"300"
+		volume			8.0
+
+		mp_damage		1
+
+		projectile
+		{
+			model			"models/weapons/m15/world/m15world.glm"
+			speed			300
+			detonation		timer
+			timer			5.0
+			gravity			0.1
+			effect			"effects/grenade_trail"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			explosionEffect 		"effects/explosions/phosphorus_explosion"
+			explosionSound		"sound/weapons/phos_grenade/phos01.wav"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+
+			mp_explosionEffect	"effects/explosions/phosphorus_explosion_mp"
+			mp_bounce		0.25
+			mp_speed		700
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"F1"
+	displayName	"WEAPONS_NAME_F1"
+	model		"models/weapons/f1/world/f1world.glm"
+	safe		false
+	rank		0.3
+	cvar		wp_f1
+	category	8		// grenade
+	menuImage	"hud/weapon_icons/f1_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_GRENADE"
+
+	attack
+	{
+		ammoType		"F1"
+		clipSize		"1"
+		damage			"300"
+		radius			"400"
+		volume			0.0
+
+		mp_damage		200
+		mp_extraClips	"1"
+
+		projectile
+		{
+			model			"models/weapons/f1/world/f1world.glm"
+			effect					"effects/grenade_trail"
+			speed			900
+			detonation		timer
+			timer			4.0
+			gravity					1
+			explosionSound		"sound/weapons/frag_grenade/boom01.wav"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			underwaterEffect	"effects/explosions/water_explosion_under"
+			explosionEffect 	"effects/explosions/fragment_explosion"
+			objectType		"tinymetalobject"
+			loopsound		"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.45
+			mp_speed		1000
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+	altattack
+	{	
+		ammoType		"F1"
+		clipSize		"1"
+		damage			"300"
+		radius			"400"
+		volume			0.0
+
+		mp_damage		200
+
+		projectile
+		{
+			model			"models/weapons/f1/world/f1world.glm"
+			speed			300
+			detonation		timer
+			timer			4.0
+			gravity			0.5
+			explosionSound		"sound/weapons/frag_grenade/boom01.wav"
+			effect					"effects/grenade_trail"
+			waterExplosionEffect		"effects/explosions/water_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			explosionEffect 		"effects/explosions/fragment_explosion"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.25
+			mp_speed		700
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"L2A2"
+	displayName	"WEAPONS_NAME_L2A2"
+	model		"models/weapons/l2a2/world/l2a2world.glm"
+	safe		false
+	rank		0.3
+	cvar		wp_l2a2
+	category	8		// grenade
+	menuImage	"hud/weapon_icons/l2a2_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_GRENADE"
+
+	attack
+	{
+		ammoType		"L2A2"
+		clipSize		"1"
+		damage			"200"
+		radius			"350"
+		volume			0.0
+
+		mp_damage		200
+		mp_extraClips	"1"
+
+		projectile
+		{
+			model			"models/weapons/l2a2/world/l2a2world.glm"
+			speed			1000
+			detonation		timer
+			timer			4.0
+			gravity					1
+			effect					"effects/grenade_trail"
+			explosionSound		"sound/weapons/frag_grenade/boom01.wav"
+			explosionEffect 		"effects/explosions/fragment_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			objectType		"tinymetalobject"
+			loopsound		"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.45
+			mp_speed		1000
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"L2A2"
+		clipSize		"1"
+		damage			"200"
+		radius			"350"
+		volume			0.0
+
+		mp_damage		200
+
+		projectile
+		{
+			model			"models/weapons/l2a2/world/l2a2world.glm"
+			speed			300
+			detonation		timer
+			timer			4.0
+			gravity					0.6
+			effect					"effects/grenade_trail"
+			explosionSound		"sound/weapons/frag_grenade/boom01.wav"
+			explosionEffect 		"effects/explosions/fragment_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.25
+			mp_speed		700
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"MDN11"
+	displayName	"WEAPONS_NAME_MDN11"
+	model		"models/weapons/mdn11/world/mdn11world.glm"
+	safe		false
+	rank		0.3
+	cvar		wp_mdn11
+	category	8		// grenade
+	menuImage	"hud/weapon_icons/mdn11_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_GRENADE"
+
+	attack
+	{
+		ammoType		"MDN11"
+		clipSize		"1"
+		damage			"250"
+		radius			"400"
+		volume			0.0
+
+		mp_damage		200
+		mp_extraClips	"1"
+
+		projectile
+		{
+			model			"models/weapons/mdn11/world/mdn11world.glm"
+			speed			900
+			detonation		timer
+			timer			3.0
+			gravity					1
+			explosionSound		"sound/weapons/frag_grenade/boom01.wav"
+			effect					"effects/grenade_trail"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			underwaterEffect	"effects/explosions/water_explosion_under"
+			explosionEffect 	"effects/explosions/fragment_explosion"
+			objectType		"tinymetalobject"
+			loopsound		"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.45
+			mp_speed		1000
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"MDN11"
+		clipSize		"1"
+		damage			"250"
+		radius			"400"
+		volume			0.0
+
+		mp_damage		200
+
+		projectile
+		{
+			model			"models/weapons/mdn11/world/mdn11world.glm"
+			speed			300
+			detonation		timer
+			timer			3.0
+			gravity					0.7
+			explosionSound		"sound/weapons/frag_grenade/boom01.wav"
+			effect					"effects/grenade_trail"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			underwaterEffect	"effects/explosions/water_explosion_under"
+			explosionEffect 	"effects/explosions/fragment_explosion"
+			objectType		"tinymetalobject"
+			loopsound		"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.25
+			mp_speed		700
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"SMOHG92"
+	displayName	"WEAPONS_NAME_SMOHG92"
+	model		"models/weapons/smohg92/world/smohg92world.glm"
+	safe		false
+	rank		0.3
+	cvar		wp_smohg92
+	category	8		// grenade
+	menuImage	"hud/weapon_icons/smohg92_icon"
+
+	mp_animRaise	"TORSO_RAISE_ONEHANDED"
+	mp_animDrop		"TORSO_DROP_ONEHANDED"
+	mp_animIdle		"TORSO_IDLE_GRENADE"
+
+	attack
+	{
+		ammoType		"SMOHG92"
+		clipSize		"1"
+		damage			"200"
+		radius			"200"
+		volume			0.0
+
+		mp_damage		200
+		mp_extraClips	"1"
+
+		projectile
+		{
+			model				"models/weapons/smohg92/world/smohg92world.glm"
+			speed				1000
+			detonation			timer
+			timer				3.0
+			gravity					1
+			effect			""
+			explosionSound		"sound/weapons/frag_grenade/boom04.wav"
+			explosionEffect 		"effects/explosions/fragment2_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.45
+			mp_speed		1000
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+	altattack
+	{
+		ammoType		"SMOHG92"
+		clipSize		"1"
+		damage			"200"
+		radius			"200"
+		volume			0.0
+
+		mp_damage		200
+
+		projectile
+		{
+			model			"models/weapons/smohg92/world/smohg92world.glm"
+			speed			300
+			detonation		timer
+			timer			3.0
+			gravity					0.8
+			effect					""
+			explosionSound		"sound/weapons/frag_grenade/boom04.wav"
+			explosionEffect 		"effects/explosions/fragment2_explosion"
+			underwaterEffect		"effects/explosions/water_explosion_under"
+			waterExplosionEffect	"effects/explosions/water_explosion"
+			objectType			"tinymetalobject"
+			loopsound			"sound/weapons/frag_grenade/in_air.wav"
+
+			mp_bounce		0.25
+			mp_speed		700
+			mp_timer		3.0
+			mp_effect		""
+		}
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"Binoculars"
+	displayName	"WEAPONS_NAME_BINOCULARS"
+	model		"models\items\binoculars\binoculars.glm"
+	safe		true
+	rank		0.0
+	oneHanded	false
+	cvar		wp_binoculars
+	category	9		// equipment
+	menuImage	"hud/weapon_icons/binoculars_icon"
+
+	attack
+	{
+		action			toggleBinocs
+		hud				"binoculars"
+
+		zoomFactors
+		{
+			max		80
+			min		5
+		}
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+}
+
+weapon
+{
+	name		"Thermal Vision"
+	displayName	"WEAPONS_NAME_THERMAL"
+	model		"models/items/thermal/thermal.glm"
+	safe		true
+	rank		0.0
+	oneHanded	false
+	cvar		wp_thermal
+	category	9		// equipment
+	menuImage	"hud/weapon_icons/thermal_icon"
+
+	attack
+	{
+		action			toggleThermal
+		hud			"thermal"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+}
+
+weapon
+{
+	name		"Night Vision"
+	displayName	"WEAPONS_NAME_NIGHTVISION"
+	model		"models/items/nightvision/nightvision.glm"
+	safe		true
+	rank		0.0
+	oneHanded	false
+	cvar		wp_nightvision
+	category	9		// equipment
+	menuImage	"hud/weapon_icons/nightvision_icon"
+
+	attack
+	{
+		action			toggleNight
+		hud			"nightvision"
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+
+}
+
+weapon
+{
+	name		"Emplaced M60"
+	displayName	"WEAPONS_NAME_M60"
+	model		"models/weapons/m60/world/m60world.glm"
+	safe		true
+	rank		1.0
+	emplaced	true
+	pivotJoint	"gun"
+	hasBase		true
+	maxRotationalVelocity	60
+	minPitch	70
+	maxPitch	45
+	cameraOffset	"0"
+	cvar		wp_emplacedm60
+	category	11		// emplaced
+
+	attack
+	{
+		ammoType			"7.62mm belt"
+		clipSize			"99"
+		damage			"65"
+		armorPiercing		"0.7"
+		muzzleFlash			"effects/emplacedm60_mflash"
+        	muzzleSmoke			"effects/muzzle_flashes/smoke_big"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_m60_inworld"
+		TracerEffect		"effects/tracerTest2"
+		ShellCasingEject		"effects/shell_brass_308_MG"
+		EjectBone			"ejection_m60"
+		range				20000
+		volume			0.95
+		inaccuracy				".05"
+		maxInaccuracy			"0.2"
+
+		mp_damage		60
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+
+weapon
+{
+	name		"Emplaced RPD"
+	displayName	"WEAPONS_NAME_RPD"
+	model		"models/weapons/rpd/rpd.glm"
+	safe		true
+	rank		1.0
+	emplaced	true
+	pivotJoint	"gun"
+	hasBase		true
+	maxRotationalVelocity	60
+	minPitch	70
+	maxPitch	45
+	cameraOffset	"0"
+	cvar		wp_rpd
+	category	11		// emplaced
+
+	attack
+	{
+		ammoType			"7.62mm"
+		clipSize			"99"
+		damage			"60"
+		armorPiercing			"0.5"
+		muzzleFlash			"effects/muzzle_flashes/mflash_rpd"
+		muzzleSmoke			"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_rpd_inworld"
+		TracerEffect		"effects/tracerTest2"
+		ShellCasingEject		"effects/shell_brass_762_MG"
+		EjectBone			"ejection_m60"
+		range				16000
+		volume			0.9
+		inaccuracy				".05"
+		maxInaccuracy			"0.2"
+
+		mp_damage		60
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"RPD"
+	displayName	"WEAPONS_NAME_RPD"
+	model		"models/weapons/rpd/rpd.glm"
+	safe		true
+	rank		1.0
+	cvar		wp_rpd
+	category	12		// non-player
+
+	attack
+	{
+		ammoType			"7.62mm"
+		clipSize			"100"
+		damage			"60"
+		armorPiercing		"0.5"
+		muzzleFlash			"effects/muzzle_flashes/mflash_rpd"
+		muzzleSmoke			"effects/muzzle_flashes/smoke_medium"
+		3rdPersonMuzzleFlash	"effects/muzzle_flashes/mflash_rpd_inworld"
+		TracerEffect		"effects/tracerTest2"
+		ShellCasingEject		"effects/shell_brass_762_MG"
+		EjectBone			"ejection_m60"
+		range				16000
+		volume			0.9
+		inaccuracy			".05"
+		maxInaccuracy		"0.2"
+
+		mp_damage		60
+
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
+
+weapon
+{
+	name		"SAM"
+	model		"models/weapons/ussocom/world/ussocomworld.glm"
+	safe		true
+	rank		0.1
+	minPitch	10
+	maxPitch	80
+	cvar		wp_sam
+	category	12		// non-player
+
+	// new school
+	attack
+	{
+		ammoType	"SAM"
+		clipSize	"1"
+		damage		"500"
+		radius		"500"
+
+		projectile
+		{
+			model			"models/objects/common/sam/missile/missile.glm"
+			speed			3000
+			gravity			0.0
+			detonation		impact
+			timer			0.0
+			effect			"effects/sam_trail.efx"
+			health			60
+			explosionEffect 	"effects/explosions/sam_explosion_final"
+			effectTag		"*effect"
+			explosionSound	"sound/weapons/explosions/explosion_fiery01.wav"
+			loopSound		"sound/weapons/rpg7/flyby.wav"
+		}
+
+		fireModes
+		{
+			mode1		single
+		}
+	}
+}
+
+
+weapon
+{
+	name		"SON OF SAM"
+	model		"models/weapons/ussocom/world/ussocomworld.glm"
+	safe		true
+	rank		0.1
+	minPitch	10
+	maxPitch	80
+	cvar		wp_sam
+	category	12		// non-player
+
+	// new school
+	attack
+	{
+		ammoType	"SAM"
+		clipSize	"1"
+		damage		"500"
+		radius		"500"
+
+		projectile
+		{
+			model			"models/objects/common/sam/missile/missile.glm"
+			speed			3000
+			gravity			0.0
+			detonation		impact
+			timer			0.0
+			effect			"effects/sam_trail.efx"
+			health			60
+			explosionEffect 	"effects/explosions/sam_explosion_final"
+			effectTag		"*effect"
+			loopSound		"sound/weapons/rpg7/flyby.wav"
+		}
+
+		fireModes
+		{
+			mode1		single
+		}
+	}
+}
+
+weapon
+{
+	name		"Sam Gladstone"
+	model		"models/characters/average_sleeves/average_sleeves.glm"
+	safe		true
+	rank		0.1
+	minPitch	10
+	maxPitch	80
+	cvar		wp_sam
+	category	12		// non-player
+
+	// new school
+	attack
+	{
+		ammoType	"SAM"
+		clipSize	"1"
+		damage		"500"
+		radius		"500"
+
+		projectile
+		{
+			model			"models/characters/average_sleeves/average_sleeves.glm"
+			speed			1000
+			gravity			0.0
+			detonation		impact
+			timer			0.0
+			effect			"effects/sam_trail.efx"
+			health			60
+			explosionEffect 	"effects/explosions/sam_explosion_final"
+			effectTag		"*effect"
+			loopSound		"sound/weapons/sam/sam_flyby.wav"
+		}
+
+		fireModes
+		{
+			mode1		single
+		}
+	}
+}
+
+weapon
+{
+	name		"Body"
+	model		"models/characters/average_sleeves/average_sleeves.glm"
+	safe		true
+	rank		0.0
+	oneHanded	false
+	category	10		// body
+	cameraOffset	"10 -40 0"
+	cvar		wp_body
+
+	attack
+	{
+		fireModes
+		{
+			mode1		auto
+		}
+	}
+}
