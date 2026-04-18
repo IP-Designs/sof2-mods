@@ -23,6 +23,11 @@ base/XTK_PerfectFX2.0*.bak
 # WeaponMod original - redistributed separately
 WeaponMod/WeaponMod.pk3
 
+# CombatMod build outputs (rebuilt by build_persistence_mod.ps1)
+CombatMod/cgamex86.dll
+CombatMod/gamex86.dll
+CombatMod/WeaponMod.pk3
+
 # Key file from WeaponMod (not ours to share)
 base/mp/sof2key
 
